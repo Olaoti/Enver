@@ -1,0 +1,83 @@
+//colors and fonts
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Nunito+Sans&display=swap');
+$cwb : #ffffff;
+$cwl : rgba(255, 255, 255, 0.7);
+$cb : #5454D4;
+$f18 : 1.8rem;
+$f80: 8rem;
+$f20: 2.0rem;
+$f21: 2.1rem;
+$fw400: 400;
+$fw700 :700;
+$lh39: 3.9rem;
+$varcolor:(
+  'cwb':$cwb,
+  'cwl': $cwl,
+  'cb': $cb,
+);
+$varfont:(
+  'f18':$f18,
+  'f80':$f80,
+  'f21':$f21,
+  'f20':$f20,
+);
+$varweight:(
+  'fw400':$fw400,
+  'fw700':$fw700,
+);
+@each $key, $val in $varcolor{
+  .c-#{$key}{
+    color:$val
+  }
+}
+@each $key, $val in $varfont{
+  .f-#{$key}{
+    font-size:$val
+  }
+}
+@each $key, $val in $varweight{
+  .fw-#{$key}{
+    font-weight:$val
+  }
+}
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+html{
+  font-size: 62.5%;
+  font-family: Nunito+Sans, sans-serif;
+  body{
+    background-color: 
+    #19191B;
+  }
+}
+.word{
+  font-size: $f21;
+  line-height:$lh39;
+}
+.btn{
+  background-color: $cb;
+  border-radius: 4px;
+  color: $cwb;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 2.7rem;
+  padding: 1.6rem 2.7rem;
+  width: fit-content;
+  transition: all 400ms ease;
+}
+.btn:hover{
+  color:$cb;
+  background-color: $cwl;
+  padding: 1.6rem 2.4rem;
+}
+.headWord{
+  font-size: 6rem;
+  line-height: 7rem;
+  color: $cwb;
+  font-weight: 700;
+  text-transform: capitalize;
+}
