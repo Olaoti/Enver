@@ -563,6 +563,12 @@ body{
             .word{
                 padding: 2rem 0 0;
             }
+            .play{
+            padding: 0.8rem 1rem;
+            }
+            .play:hover{
+                padding: 1rem 1.3rem;
+            }
         }
     }
     .project{
@@ -627,7 +633,7 @@ body{
         }
     }
 }
-@media screen and (max-width:450px) {
+@media screen and (max-width:550px) {
     $f21:1.6rem;
     $f20:1.6rem;
     $lh39:150%;
@@ -663,11 +669,21 @@ body{
                 }
             }
             .right{
-                padding-left: 3rem;
-                padding-top: 5rem;
+                padding: 5rem 0 0;
                 div{
-                    width: 20rem;
-                    height: 20rem;
+                    width: 60%;
+                    height: 60%;
+                    margin: 0 15%;
+                    padding: 5rem;
+                }
+                .second{
+                    margin-left: 15%;
+                }
+                img{
+                    position:relative;
+                    width: 70%;
+                    padding:0 auto;
+                    margin:0 15%;
                 }
             }
         }
@@ -692,7 +708,12 @@ body{
         }
     }
     .project{
-        padding: 4rem 2.4rem;
+        padding: 3rem;
+        .images{
+            div:not(:last-child){
+                margin-right: 0;
+            }
+        }
     }
     .contact{
         padding: 8rem 2.4rem;
